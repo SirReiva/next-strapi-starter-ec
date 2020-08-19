@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Categories",
+  "info": {
+    "name": "Category"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Descripccion": {
+      "type": "richtext"
+    },
+    "products": {
+      "via": "categories",
+      "collection": "product"
+    }
+  }
+}
