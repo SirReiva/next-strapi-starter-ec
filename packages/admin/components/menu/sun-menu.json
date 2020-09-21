@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sub_menu_sun_menus",
+  "info": {
+    "name": "SubMenu",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -9,17 +9,26 @@
     "timestamps": true
   },
   "attributes": {
-    "Nombre": {
+    "name": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Descripccion": {
+    "descripccion": {
       "type": "richtext"
     },
     "products": {
       "via": "categories",
       "collection": "product"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
     }
   }
 }

@@ -9,11 +9,11 @@
     "timestamps": true
   },
   "attributes": {
-    "Nombre": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Descripcion": {
+    "description": {
       "type": "richtext",
       "required": true
     },
@@ -26,6 +26,24 @@
       "collection": "category",
       "via": "products",
       "dominant": true
+    },
+    "price": {
+      "type": "float",
+      "unique": false,
+      "min": 0
+    },
+    "discountPrice": {
+      "type": "float",
+      "min": 0
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

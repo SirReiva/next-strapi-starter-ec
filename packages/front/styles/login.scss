@@ -1,0 +1,187 @@
+.radion_btn input[type='radio'] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.radion_btn {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    img {
+        position: absolute;
+        right: 40px;
+        top: 0px;
+    }
+}
+
+.radion_btn label {
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.35em;
+    padding: 0px 25px 21px 25px;
+    height: 14px;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+    font-family: $font_stack_1;
+    font-weight: 500;
+    color: $title-color;
+    font-size: 13px;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+}
+
+.radion_btn .check {
+    display: block;
+    position: absolute;
+    border: 1px solid #cdcdcd;
+    border-radius: 100%;
+    height: 14px;
+    width: 14px;
+    top: 5px;
+    left: 0px;
+    background: #fff;
+    z-index: 5;
+    transition: border 0.25s linear;
+    -webkit-transition: border 0.25s linear;
+}
+
+.radion_btn .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 4px;
+    width: 4px;
+    top: 4px;
+    left: 4px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+}
+
+.radion_btn input[type='radio']:checked ~ .check {
+    border: 1px solid $primary-color;
+    background: $primary-color;
+}
+
+.radion_btn input[type='radio']:checked ~ .check::before {
+    background: #fff;
+}
+
+.radion_btn input[type='radio']:checked ~ label {
+    color: #000;
+}
+.login_part {
+    .login_part_text,
+    .login_part_form {
+        padding: 80px 70px;
+        height: 600px;
+        display: table;
+        @media #{$tab} {
+            padding: 30px;
+            height: 400px;
+        }
+        @media #{$medium_device} {
+            padding: 20px;
+            height: 400px;
+        }
+        .login_part_text_iner,
+        .login_part_form_iner {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    .login_part_text {
+        background-image: -moz-linear-gradient(
+            90deg,
+            #b08ead 0%,
+            #4b3049 64%,
+            #b08ead 100%
+        );
+        background-image: -webkit-linear-gradient(
+            90deg,
+            #b08ead 0%,
+            #4b3049 64%,
+            #b08ead 100%
+        );
+        background-image: linear-gradient(
+            90deg,
+            #b08ead 0%,
+            #4b3049 64%,
+            #b08ead 100%
+        );
+        background-size: 200% auto;
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 35px;
+            color: $white_color;
+            margin-bottom: 17px;
+        }
+        p {
+            color: $white_color;
+            line-height: 25px;
+        }
+        .btn_3 {
+            border: 1px solid $white;
+            background-color: transparent;
+            font-size: 14px;
+            margin-top: 28px;
+            color: $white !important;
+            &:hover {
+                background-color: $white_color;
+                color: $btn_bg !important;
+            }
+        }
+    }
+    .login_part_form {
+        @media #{$tab} {
+            padding: 0;
+        }
+        h3 {
+            font-size: 26px;
+            line-height: 36px;
+            font-weight: 700;
+            margin-bottom: 80px;
+            @media #{$tab} {
+                margin-bottom: 20px;
+            }
+            @media #{$medium_device} {
+                margin-bottom: 20px;
+            }
+        }
+        .form-control {
+            border: 0px solid transparent;
+            border-bottom: 1px solid $font_d;
+            border-radius: 0;
+            ::placeholder {
+                color: #c3c3c3;
+            }
+        }
+    }
+    .creat_account {
+        margin-top: 11px;
+        label {
+            color: $font_7;
+            font-size: 14px;
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+    }
+    .form-group {
+        .btn_3 {
+            display: block;
+            width: 100%;
+            margin: 30px 0 17px;
+        }
+    }
+    .lost_pass {
+        color: $font_7;
+        text-align: right;
+        float: right;
+        text-transform: capitalize;
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_menu_menu_items",
+  "info": {
+    "name": "MenuItem",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "subItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.sun-menu"
+    }
+  }
+}
